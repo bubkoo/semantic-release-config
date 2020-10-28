@@ -36,3 +36,7 @@ The shareable config can be configured in the [**semantic-release** configuratio
   "branch": "master"
 }
 ```
+
+## License
+
+The scripts and documentation in this project are released under the [MIT License](LICENSE)
