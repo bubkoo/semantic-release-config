@@ -30,8 +30,9 @@ const releaseRules = [
 ]
 
 function getSuccessComment() {
-  const header = ":tada: This <%= issue.pull_request ? 'PR is included' : 'issue has been resolved' %> in version <%= nextRelease.version %> :tada:"
-  const body = ''
+  return (
+    ''
+    + ":tada: This <%= issue.pull_request ? 'PR is included' : 'issue has been resolved' %> in version <%= nextRelease.version %> :tada:"
     + '<% if(typeof releases !== "undefined" && Array.isArray(releases) && releases.length > 0) { %>'
     + '  <% var releaseInfos = releases.filter(function(release) { return !!release.name }) %>'
     + '    <% if(releaseInfos.length) { %>'
@@ -56,8 +57,7 @@ function getSuccessComment() {
     + '    <% } %>'
     + '  <% } %>'
     + '<% } %>'
-
-  return header + body
+  )
 }
 
 module.exports = {
