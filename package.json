@@ -1,0 +1,62 @@
+{
+  "name": "@bubkoo/semantic-release-config",
+  "description": "Sharable configuration for semantic-release, extends experience for publishing to NPM & Github",
+  "version": "1.0.0",
+  "main": "release.config.js",
+  "scripts": {
+    "lint": "eslint **/*.js --fix"
+  },
+  "files": [
+    "release.config.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "semantic-release",
+    "semantic-release-config",
+    "npm",
+    "github",
+    "git",
+    "release",
+    "changelog",
+    "semantic-release-config",
+    "semantic-release",
+    ".releaserc.json",
+    "release.config.js"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "**/*.*": [
+      "pretty-quick — staged"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": "https://github.com/bubkoo/semantic-release-config",
+  "author": "bubkoo <bubkoo.wy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0"
+  }
+}
