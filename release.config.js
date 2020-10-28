@@ -29,6 +29,37 @@ const releaseRules = [
   },
 ]
 
+function getSuccessComment() {
+  const header = ":tada: This <%= issue.pull_request ? 'PR is included' : 'issue has been resolved' %> in version <%= nextRelease.version %> :tada:"
+  const body = ''
+    + '<% if(typeof releases !== "undefined" && Array.isArray(releases) && releases.length > 0) { %>'
+    + '<% var releaseInfos = releases.filter(function(release) { return !!release.name }) %>'
+    + '<% if(releaseInfos.length) { %>'
+    + '\n\nThe release is available on'
+    + '<% if (releaseInfos.length === 1) { %>'
+    + ' '
+    + '<% if(releaseInfos[0].url) { %>'
+    + '[<%= releaseInfos[0].name %>](<%= releaseInfos[0].url %>)'
+    + '<% } else { %>'
+    + '<%= releaseInfos[0].name %>'
+    + '<% } %>'
+    + '  <% } else { %>'
+    + ':'
+    + '<% releaseInfos.forEach(function(release) { %>'
+    + '\n- '
+    + '<% if(release.url) { %>'
+    + '[<%= release.name %>](<%= release.url %>)'
+    + '<% } else { %>'
+    + '<%= release.name %>'
+    + '<% } %>'
+    + '<% }) %>'
+    + '<% } %>'
+    + '<% } %>'
+    + '<% } %>'
+
+  return header + body
+}
+
 module.exports = {
   plugins: [
     [
@@ -40,7 +71,12 @@ module.exports = {
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
     '@semantic-release/npm',
-    '@semantic-release/github',
+    [
+      '@semantic-release/github',
+      {
+        successComment: getSuccessComment(),
+      },
+    ],
     [
       '@semantic-release/git',
       {
