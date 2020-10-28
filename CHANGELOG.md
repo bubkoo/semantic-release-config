@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/bubkoo/semantic-release-config/compare/v1.1.1...v1.1.2) (2020-10-28)
+
+
+### Bug Fixes
+
+* 🐛 generate markdown comment ([fb51b8c](https://github.com/bubkoo/semantic-release-config/commit/fb51b8c1cc9d42e04491e6b0c0e626f4e3d2227e)), closes [#3](https://github.com/bubkoo/semantic-release-config/issues/3)
+
 ## [1.1.1](https://github.com/bubkoo/semantic-release-config/compare/v1.1.0...v1.1.1) (2020-10-28)
 
 # [1.1.0](https://github.com/bubkoo/semantic-release-config/compare/v1.0.1...v1.1.0) (2020-10-28)
