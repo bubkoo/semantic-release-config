@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/bubkoo/semantic-release-config/compare/v1.1.2...v1.2.0) (2020-10-28)
+
+
+### Features
+
+* ✨ add links to other releases to the GitHub release body ([7430275](https://github.com/bubkoo/semantic-release-config/commit/74302753a795cd227360aa7f48b21b4c733b4fc7))
+
 ## [1.1.2](https://github.com/bubkoo/semantic-release-config/compare/v1.1.1...v1.1.2) (2020-10-28)
 
 
