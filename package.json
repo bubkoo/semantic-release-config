@@ -1,7 +1,7 @@
 {
   "name": "@bubkoo/semantic-release-config",
   "description": "Sharable configuration for semantic-release, extends experience for publishing to NPM & Github",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "release.config.js",
   "scripts": {
     "lint": "eslint **/*.js --fix"
