@@ -32,8 +32,7 @@ The shareable config can be configured in the [**semantic-release** configuratio
 
 ```json
 {
-  "extends": "@bubkoo/semantic-release-config",
-  "branch": "master"
+  "extends": "@bubkoo/semantic-release-config"
 }
 ```
 
